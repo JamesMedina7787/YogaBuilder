@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Warm Ups</title>
+       <%- include partials/_mobile %>
+            <link rel="stylesheet" href="/partials/style.css">
+  </head>
+  <body style="text-align:center;background-color:oldlace;font-size:30px;font-family:'Open Sans'">
+    <div id='container'><div class="poseSanskrit"><%= warm.pose %><span id="sanskrit">yoga warm ups</span>
+</div>
+    <a href="/suns"><button>Next Pose</button></a>
+    <a href="/generate"><button onclick="you()">Open in YouTube</button></a>
+  </div></body>
+  <script type="text/javascript">
+    let innerSanskrit;
+    let horse;
+    innerSankrit = document.getElementById('sanskrit')
+    innerSankrit2 = innerSankrit.innerHTML
+    function you(){
+      horse =  window.open(`https://www.youtube.com/results?search_query=YogaWarmUps`)
+    }
+  </script>
+</html>

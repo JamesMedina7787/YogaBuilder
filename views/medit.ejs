@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+       <%- include partials/_mobile %>
+            <link rel="stylesheet" href="/partials/style.css">
+  </head>
+  <body style="font-size:30px;font-family:'Open Sans'">
+    <div id='container'>
+        <div class="poseSanskrit"><%= medit.pose %><span id="sanskrit"><%= medit.sanskrit %></span>
+    <%= medit.difficulty %>
+  </div>
+    <a href="/hips"><button>Next Pose</button></a>
+    <a href="/hips"><button onclick="you()">Open in YouTube</button></a>
+<a href="/medit"><button>Different Pose</button></a>
+</div>
+  </body>
+  <script type="text/javascript">
+    let innerSanskrit;
+    let horse;
+    innerSankrit = document.getElementById('sanskrit')
+    innerSankrit2 = innerSankrit.innerHTML
+    function you(){
+      horse =  window.open(`https://www.youtube.com/results?search_query=${innerSankrit2}`)
+    }
+  </script>
+</html>

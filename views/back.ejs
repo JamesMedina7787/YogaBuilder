@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Back Bend</title>
+       <%- include partials/_mobile %>
+           <link rel="stylesheet" href="/partials/style.css">
+  </head>
+  <body>
+    <div id="container">
+        <div class="poseSanskrit"><%= back.pose %><br><span id="sanskrit"><%= back.sanskrit %></span>
+</br>
+  </div>
+    <a  href="/hips"><button>Next Pose</button></a>
+<div class="poseSanskrit">
+    Difficulty Level: <%= back.difficulty %>
+  </div>
+  <a href="/back"><button onclick="you()">Open in YouTube</button></a>
+  <a href="/back"><button>Different Back Bend</button></a>
+</div>
+  </body>
+  <script type="text/javascript">
+    let innerSanskrit;
+    let horse;
+    innerSankrit = document.getElementById('sanskrit')
+    innerSankrit2 = innerSankrit.innerHTML
+    console.log(innerSankrit2)
+    function you(){
+      horse =  window.open(`https://www.youtube.com/results?search_query=${innerSankrit2}`)
+    }
+      </script>
+</html>

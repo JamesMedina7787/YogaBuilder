@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Inversion</title>
+       <%- include partials/_mobile %>
+            <link rel="stylesheet" href="/partials/style.css">
+  </head>
+  <body style="background-color:oldlace;text-align:center;font-size:30px;font-family:'Open Sans'">
+    <div id='container'>
+        <div class="poseSanskrit"><%= inverts.pose %><br><span id="sanskrit"><%= inverts.sanskrit %></span>
+<br>
+  </div>
+    <a href="/breaths"><button >Next Pose</button></a>
+        <div class="poseSanskrit">
+<br>Difficulty Level:  <%= inverts.difficulty %>
+</div>
+<a href="/inverts"><button onclick="you()">Open in YouTube</button></a>
+<a href="/inverts"><button>Different Inversion</button></a>
+</div>
+  </body>
+  <script type="text/javascript">
+    let innerSanskrit;
+    let horse;
+    innerSankrit = document.getElementById('sanskrit')
+    innerSankrit2 = innerSankrit.innerHTML
+    function you(){
+      horse =  window.open(`https://www.youtube.com/results?search_query=${innerSankrit2}`)
+    }
+  </script>
+</html>

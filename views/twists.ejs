@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Twist</title>
+       <%- include partials/_mobile %>
+            <link rel="stylesheet" href="/partials/style.css">
+  </head>
+  <body style="text-align:center;background-color:oldlace;font-size:30px;font-family:'Open Sans'">
+<div id="container">
+    <div class="poseSanskrit"><%= twists.pose %><br><span id="sanskrit"><%= twists.sanskrit %></span>
+      <br>
+
+      </div>
+    <a href="/fbends"><button>Next Pose</button></a><br>
+
+  <div class="poseSanskrit">
+  Difficulty Level: <%= twists.difficulty %>
+</div>
+<a href="/twists"><button onclick="you()">Open in YouTube</button></a>
+
+<a href="/twists"><button>Different Twist</button></a>
+
+</div>
+  </body>
+  <script type="text/javascript">
+    let innerSanskrit;
+    let horse;
+    innerSankrit = document.getElementById('sanskrit')
+    innerSankrit2 = innerSankrit.innerHTML
+    function you(){
+      horse =  window.open(`https://www.youtube.com/results?search_query=${innerSankrit2}`)
+    }
+  </script>
+</html>

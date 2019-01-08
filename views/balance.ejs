@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Balancing Pose</title>
+       <%- include partials/_mobile %>
+            <link rel="stylesheet" href="/partials/style.css">
+  </head>
+  <body>
+    <div id='container'>
+        <span><%= balance.pose %></span>
+      <span id="sanskrit">
+    <%= balance.sanskrit %>
+  </span>
+    <a href="/back" ><button>Next Pose</button></a>
+<br><div class="poseSanskrit">Difficulty Level:  <%= balance.difficulty %></div>
+<a href="/balance"><button onclick="you()">Open in YouTube</button></a>
+<a href="/balance"><button>Different Balancing Pose</button></a>
+</div>
+  </body>
+  <script type="text/javascript">
+    let innerSanskrit;
+    let horse;
+    innerSankrit = document.getElementById('sanskrit')
+    innerSankrit2 = innerSankrit.innerHTML
+    function you(){
+      horse =  window.open(`https://www.youtube.com/results?search_query=${innerSankrit2}`)
+    }
+  </script>
+</html>
